@@ -1,15 +1,15 @@
 @font-face {
-    font-family: 'OpenSansRegular';
+    font-family: 'OpenSansRegular, Helvetica, Arial, sans-serif';
     src: url(../fonts/OpenSans-Regular.ttf);
 }
 
 @font-face {
-    font-family: 'OpenSansBold';
+    font-family: 'OpenSansBold, Helvetica, Arial, sans-serif';
     src: url(../fonts/OpenSans-Bold.ttf);
 }
 
 @font-face {
-    font-family: 'OpenSansLight';
+    font-family: 'OpenSansLight, Helvetica, Arial, sans-serif';
     src: url(../fonts/OpenSans-Light.ttf);
 }
 
@@ -133,7 +133,8 @@ input, textarea {
             position: relative;
             font-size: 16px;
             line-height: 18px;
-            font-family: OpenSansRegular;
+            font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
+            font-weight: 400;
             color: @color-gray-dark-text;
 
             &:after {
@@ -175,7 +176,8 @@ input, textarea {
 
         & > a {
             font-size: 11px;
-            font-family: OpenSansRegular;
+            font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
+            font-weight: 400;
             color: @color-gray-light-text;
             position: relative;
 
@@ -257,13 +259,15 @@ input, textarea {
 
     &__name {
         font-size: 16px;
-        font-family: OpenSansRegular;
+        font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
+        font-weight: 400;
         color: #FFFFFF;
 
         &--anon {
             a {
                 font-size: 16px;
-                font-family: OpenSansRegular;
+                font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
+                font-weight: 400;
                 color: #FFFFFF;
                 position: relative;
 
@@ -285,7 +289,8 @@ input, textarea {
 
         a {
             font-size: 11px;
-            font-family: OpenSansRegular;
+            font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
+            font-weight: 400;
             color: #FFFFFF;
             opacity: .5;
             position: relative;
@@ -354,7 +359,8 @@ input, textarea {
 
         a {
             font-size: 12px;
-            font-family: OpenSansRegular;
+            font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
+            font-weight: 400;
             color: @color-navy;
             opacity: .5;
             position: relative;
@@ -400,7 +406,8 @@ input, textarea {
         display: inline-block;
         vertical-align: middle;
         font-size: 11px;
-        font-family: OpenSansLight;
+        font-family: OpenSansLight, Helvetica, Arial, sans-serif;
+        font-weight: 100;
         color: #000000;
         opacity: .38;
     }
@@ -413,7 +420,8 @@ input, textarea {
 
     &__p {
         font-size: 13px;
-        font-family: OpenSansRegular;
+        font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
+        font-weight: 400;
         color: #a1a1a1;
         line-height: 20px;
     }
@@ -423,7 +431,8 @@ input, textarea {
 
     &__title {
         font-size: 11px;
-        font-family: OpenSansBold;
+        font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+        font-weight: 600;
         color: @color-navy;
         text-transform: uppercase;
         margin-bottom: 10px;
@@ -436,7 +445,8 @@ input, textarea {
         border-radius: 5px;
         text-align: center;
         font-size: 14px;
-        font-family: OpenSansBold;
+        font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+        font-weight: 600;
         color: #646464;
         margin-bottom: 42px;
         box-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.04);
@@ -501,7 +511,8 @@ input, textarea {
 
     &--long {
         width: 345px;
-        font-family: OpenSansRegular;
+        font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
+        font-weight: 400;
 
         text-align: left;
     }
@@ -540,6 +551,12 @@ input, textarea {
         display: inline-block;
         margin-top: 20px;
     }
+
+    a {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
 }
 
 .article {
@@ -547,7 +564,8 @@ input, textarea {
     &__title {
 
         font-size: 30px;
-        font-family: OpenSansBold;
+        font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+        font-weight: 600;
         color: @color-navy;
         display: inline-block;
         vertical-align: middle;
@@ -571,7 +589,8 @@ input, textarea {
 
     &__content {
         font-size: 14px;
-        font-family: OpenSansLight;
+        font-family: OpenSansLight, Helvetica, Arial, sans-serif;
+        font-weight: 100;
         color: lighten(#aaaaaa, 10%);
         margin: 30px 0 35px 0;
     }
@@ -611,7 +630,8 @@ input, textarea {
 
         &-text {
             font-size: 18px;
-            font-family: OpenSansBold;
+            font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+            font-weight: 600;
             color: @color-navy;
             display: inline-block;
             vertical-align: top;
@@ -637,13 +657,15 @@ input, textarea {
 
         &-title {
             font-size: 13px;
-            font-family: OpenSansBold;
+            font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+            font-weight: 600;
             color: @color-gray-dark-text;
             display: inline-block;
             vertical-align: top;
 
             span {
-                font-family: OpenSansLight;
+                font-family: OpenSansLight, Helvetica, Arial, sans-serif;
+                font-weight: 100;
             }
         }
 
@@ -655,7 +677,8 @@ input, textarea {
 
         &-value {
             font-size: 13px;
-            font-family: OpenSansBold;
+            font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+            font-weight: 600;
             color: @color-navy;
             float: right;
         }
@@ -668,7 +691,8 @@ input, textarea {
 
         a {
             font-size: 11px;
-            font-family: OpenSansRegular;
+            font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
+            font-weight: 400;
             color: #71aacc;
             position: relative;
 
@@ -760,7 +784,8 @@ input, textarea {
 
         &__review {
             font-size: 13px;
-            font-family: OpenSansLight;
+            font-family: OpenSansLight, Helvetica, Arial, sans-serif;
+            font-weight: 100;
             color: #aaaaaa;
             width: 390px;
             display: inline-block;
@@ -768,7 +793,8 @@ input, textarea {
         }
         &__name {
             font-size: 14px;
-            font-family: OpenSansBold;
+            font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+            font-weight: 600;
             color: #808080;
             margin-top: 30px;
         }
@@ -788,7 +814,8 @@ input, textarea {
 
             &-text {
                 font-size: 14px;
-                font-family: OpenSansLight;
+                font-family: OpenSansLight, Helvetica, Arial, sans-serif;
+                font-weight: 100;
                 color: lighten(#aaaaaa, 10%);
                 width: 680px;
                 display: inline-block;
@@ -822,7 +849,8 @@ input, textarea {
         border-radius: 50%;
         background: @color-navy-light;
         font-size: 24px;
-        font-family: OpenSansBold;
+        font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+        font-weight: 600;
         color: #FFFFFF;
         text-align: center;
     }
@@ -831,7 +859,8 @@ input, textarea {
         display: inline-block;
         vertical-align: middle;
         font-size: 24px;
-        font-family: OpenSansBold;
+        font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+        font-weight: 600;
         color: @color-navy-light;
     }
 }
@@ -864,6 +893,7 @@ input, textarea {
         vertical-align: middle;
         position: relative;
         margin-right: 5px;
+        cursor: pointer;
 
         &:after {
             content: '';
@@ -879,7 +909,8 @@ input, textarea {
 
     &__text {
         font-size: 13px;
-        font-family: OpenSansRegular;
+        font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
+        font-weight: 400;
         color: #a1a1a1;
         width: 200px;
         display: inline-block;
@@ -919,7 +950,8 @@ input, textarea {
         }
 
         &__list-title {
-            font-family: OpenSansLight;
+            font-family: OpenSansLight, Helvetica, Arial, sans-serif;
+            font-weight: 100;
             color: @color-gray-dark-text;
         }
 
@@ -947,6 +979,7 @@ input, textarea {
         vertical-align: middle;
         position: relative;
         margin-right: 5px;
+        cursor: pointer;
 
         &:after {
             content: '';
@@ -962,7 +995,8 @@ input, textarea {
 
     &__text {
         font-size: 13px;
-        font-family: OpenSansRegular;
+        font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
+        font-weight: 400;
         color: #a1a1a1;
         width: 695px;
         display: inline-block;
@@ -1012,7 +1046,8 @@ input, textarea {
         display: inline-block;
         vertical-align: middle;
         font-size: 13px;
-        font-family: OpenSansLight;
+        font-family: OpenSansLight, Helvetica, Arial, sans-serif;
+        font-weight: 100;
         color: @color-navy;
         position: relative;
 
