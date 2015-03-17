@@ -1,0 +1,118 @@
+div.fancy-select {
+	position: relative;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+div.fancy-select div.trigger {
+	cursor: pointer;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: relative;
+	border: 1px solid #d0d0d0;
+	font-family: RobotoLight;
+	background: #ffffff;
+	width: 275px;
+	margin: 0 auto;
+	padding: 10px 24px 9px 9px;
+	transition: all 240ms ease-out;
+	-webkit-transition: all 240ms ease-out;
+	-moz-transition: all 240ms ease-out;
+	-ms-transition: all 240ms ease-out;
+	-o-transition: all 240ms ease-out;
+}
+
+div.trigger {
+	color: #d0d0d0;
+}
+
+div.trigger.selected {
+	color: #323232;
+}
+
+div.fancy-select div.trigger:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: linear-gradient(rgba(0, 0, 0, .02), rgba(0, 0, 0, .15));
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+
+div.fancy-select div.trigger:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-top-color: rgba(0, 0, 0, .2);
+	top: 17px;
+	right: 14px;
+}
+
+div.fancy-select ul.options {
+	list-style: none;
+	margin: 0 auto;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	right: 0;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 50;
+	max-height: 200px;
+	width: 308px;
+	overflow: auto;
+	background: #ffffff;
+	border-top: 1px solid #d0d0d0;
+	font-size: 14px;
+	font-family: RobotoLight;
+	color: #d0d0d0;
+	transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+	-webkit-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+	-moz-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+	-ms-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+	-o-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+}
+
+
+
+div.fancy-select ul.options.open {
+	visibility: visible;
+	top: 40px;
+	opacity: 1;
+	border-left: 1px solid #d0d0d0;
+	border-right: 1px solid #d0d0d0;
+	border-bottom: 1px solid #d0d0d0;
+}
+
+div.fancy-select ul.options.overflowing {
+	top: auto;
+	bottom: 30px;
+}
+
+div.fancy-select ul.options.overflowing.open {
+	top: auto;
+	bottom: 41px;
+}
+
+div.fancy-select ul.options li {
+	padding: 8px 12px;
+	color: #323232;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+div.fancy-select ul.options li.selected {
+	background: rgba(0,0,0,0.1);
+	color: rgba(255,255,255,1);
+}
+
+div.fancy-select ul.options li.hover {
+	color: #d0d0d0;
+}
