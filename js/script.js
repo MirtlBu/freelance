@@ -47,9 +47,10 @@ $(function() {
 
 
     [$('#getSelect'), $('#paySelect'), $('#currencySelect')].forEach(function($select) {
+        if (!$select.length) return;
         $select.fancySelect({
             optionTemplate: function(optionEl) {
-                return renderWithImage(moneyIcons[optionEl.text()].url, optionEl.text());
+                return renderWithImage(moneyIcons[optionEl.text()].url, optionEl.text(), moneyIcons[optionEl.text()].currency);
             }
         }).on('change.fs', function() {
             var val = $(this).val();
