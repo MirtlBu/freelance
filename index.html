@@ -78,7 +78,7 @@
 
             <div class="steps step1">
                 <div class="dialog">
-                    <form class="form step1__form">
+                    <form class="form step1__form" novalidate>
                         <div class="pay">
                             <label class="form__label form__label--error">
                                 <div class="form__title">Вы отдаёте</div>
@@ -124,7 +124,7 @@
                                 <span>Поле заполнено некорректно!</span>
                             </div>
                         </label>
-                        <button class="button-exchange button-exchange--step1" type="submit"></button>
+                        <button class="button-exchange button-exchange--step1" type="submit"><a href="step2.html"></a></button>
                     </form>
                     <div class="table">
                         <div class="table__title">
@@ -231,155 +231,6 @@
                     </ul>
                 </div>
             </div>
-
-            <div class="steps step2">
-                <div class="dialog">
-                    <div class="numeration">
-                        <div class="numeration__circle">2</div>
-                        <div class="numeration__text">-ой Шаг</div>
-                    </div>
-                    <form class="form">
-                        <label class="form__label">
-                            <div class="form__title">Ваше имя</div>
-                            <input class="form__input form--dark form--long" type="text" value="" name="">
-                            <div class="form__error form__error--input">
-                                <img src="img/icon-error.png">
-                                <span>Поле заполнено некорректно!</span>
-                            </div>
-                        </label>
-                        <label class="form__label">
-                            <div class="form__title">Ваша фамилия</div>
-                            <input class="form__input form--dark form--long" type="text" value="" name="">
-                            <div class="form__error form__error--input">
-                                <img src="img/icon-error.png">
-                                <span>Поле заполнено некорректно!</span>
-                            </div>
-                        </label>
-                        <ul class="radio">
-                            <li class="form__title">Выберите нужное</li>
-                            <li class="radio__item">
-                                <input class="radio__input" type="radio" name="choose" value="radio1" id="radio1" checked>
-                                <label class="radio__label" for="radio1"></label>
-                                <div class="radio__text">Li Europan lingues es membres del sam familie.</div>
-                            </li>
-                            <li class="radio__item">
-                                <input class="radio__input" type="radio" name="choose" value="radio2" id="radio2">
-                                <label class="radio__label" for="radio2"></label>
-                                <div class="radio__text">Li Europan lingues es membres del sam familie.</div>
-                            </li>
-                            <li class="radio__item">
-                                <input class="radio__input" type="radio" name="choose" value="radio3" id="radio3">
-                                <label class="radio__label" for="radio3"></label>
-                                <div class="radio__text">Li Europan lingues es membres del sam familie.</div>
-                            </li>
-                        </ul>
-                        <label class="form__label">
-                            <div class="form__title">Ваш email</div>
-                            <input class="form__input form--dark form--long" type="text" value="2350" name="amount">
-                            <div class="form__error form__error--input">
-                                <img src="img/icon-error.png">
-                                <span>Поле заполнено некорректно!</span>
-                            </div>
-                        </label>
-                        <select class="form--light form--medium" data-class="form__select" id="currencySelect">
-                            <option value="Webmoney">Webmoney</option>
-                            <option value="Bitcoin">Bitcoin</option>
-                            <option value="PerfectMoney">PerfectMoney</option>
-                        </select>
-                        <div class="dialog__text">
-                            <p class="dialog__p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-                            <p class="dialog__p">Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus</p>
-                        </div>
-                        <ul class="checkbox">
-                            <li class="checkbox__item">
-                                <input class="checkbox__input" type="checkbox" name="check" value="check1" id="check1">
-                                <label class="checkbox__label" for="check1"></label>
-                                <div class="checkbox__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massaum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</div>
-                            </li>
-                            <li class="checkbox__item">
-                                <input class="checkbox__input" type="checkbox" name="check" value="check2" id="check2" checked>
-                                <label class="checkbox__label" for="check2"></label>
-                                <div class="checkbox__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</div>
-                            </li>
-                        </ul>
-                        <div class="form__error form__error--paragraph">
-                            <img src="img/icon-error.png">
-                            <span>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine</span>
-                        </div>
-                        <div class="captcha">
-                            <div class="captcha__image"><img src="img/captcha.jpg"></div>
-                            <div class="captcha__input">
-                                <div class="form__title">Введите код с картинки</div>
-                                <input class="form__input form--light form--short" type="text" value="" name="">
-                            </div>
-                        </div>
-                        <button class="button-exchange button-exchange--step2" type="submit"></button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="step step3">
-                <div class="dialog">
-                    <div class="numeration">
-                        <div class="numeration__circle">3</div>
-                        <div class="numeration__text">-ий Шаг</div>
-                    </div>
-                    <form class="form">
-                        <div class="form__title">Ваше имя</div>
-                        <div class="dialog__text">
-                            <p class="dialog__p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                        </div>
-                        <button class="button-exchange button-exchange--step3" type="submit"></button>
-                        <a class="back">
-                            <img class="back__image" src="img/icon-back.png">
-                            <div class="back__text">Вернуться на шаг назад</div>
-                        </a>
-                        <div class="table">
-                            <div class="table__title">
-                                <div class="table__title-text">Данные перевода</div>
-                            </div>
-                            <ul class="table__list">
-                                <li class="table__list-item">
-                                    <div class="table__list-title">Система:</div>
-                                    <div class="table__list-value">Wester Union</div>
-                                </li>
-                                <li class="table__list-item">
-                                    <div class="table__list-title">Имя получателя:</div>
-                                    <div class="table__list-value">Васисуалий</div>
-                                </li>
-                                <li class="table__list-item">
-                                    <div class="table__list-title">Фамилия получателя:</div>
-                                    <div class="table__list-value">Петров</div>
-                                </li>
-                                <li class="table__list-item">
-                                    <div class="table__list-title">Город:</div>
-                                    <div class="table__list-value">Москва</div>
-                                </li>
-                                <li class="table__list-item">
-                                    <div class="table__list-title">Страна:</div>
-                                    <div class="table__list-value">Россия</div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="dialog__text">
-                            <p class="dialog__p">Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                        </div>
-                        <ul class="checkbox">
-                            <li class="checkbox__item">
-                                <input class="checkbox__input" type="checkbox" name="check" value="check1" id="check3">
-                                <label class="checkbox__label" for="check3"></label>
-                                <div class="checkbox__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massaum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</div>
-                            </li>
-                        </ul>
-                        <button class="button-exchange button-exchange--step3" type="submit"></button>
-                        <a class="back">
-                            <img class="back__image" src="img/icon-back.png">
-                            <div class="back__text">Вернуться на шаг назад</div>
-                        </a>
-                    </form>
-                </div>
-            </div>
-
 
             <div class="footer">
                 <div class="logoTE">

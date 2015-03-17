@@ -1,9 +1,4 @@
 @font-face {
-    font-family: 'OpenSansRegular';
-    src: url(../fonts/OpenSans-Regular.ttf);
-}
-
-@font-face {
     font-family: 'OpenSansBold';
     src: url(../fonts/OpenSans-Bold.ttf);
 }
@@ -11,11 +6,6 @@
 @font-face {
     font-family: 'OpenSansLight';
     src: url(../fonts/OpenSans-Light.ttf);
-}
-
-@font-face {
-    font-family: 'OpenSansItalic';
-    src: url(../fonts/OpenSans-Italic.ttf);
 }
 
 @color-navy: #006ab4;
@@ -31,17 +21,19 @@
 
     div.trigger {
         width: 240px;
+        height: 42px;
         box-sizing: border-box;
         border: 1px solid lighten(@color-navy-light-text, 15%);
         border-radius: 5px;
         padding: 11px 0 11px 10px;
         font-size: 13px;
-        font-family: OpenSansBold;
+        font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+        font-weight: 600;
         color: #646464;
 
         &.open {
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
+            // border-bottom-left-radius: 0;
+            // border-bottom-right-radius: 0;
         }
 
         &:before {
@@ -59,11 +51,12 @@
         img {
             display: inline-block;
             vertical-align: bottom;
-            margin-right: 5px;
+            margin-right: 10px;
         }
 
         span {
-            font-family: OpenSansLight;
+            font-family: OpenSansLight, Helvetica, Arial, sans-serif;
+            font-weight: 100;
         }
     }
 
@@ -72,18 +65,31 @@
         padding: 0 10px;
         box-sizing: border-box;
         border: 1px solid lighten(@color-navy-light-text, 15%);
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
         text-align: center;
         font-size: 13px;
-        font-family: OpenSansBold;
+        font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+        font-weight: 600;
         color: #646464;
-        top: 38px;
+        top: 41px;
 
         &.open {
-            top: 38px;
+            top: 41px;
             border: 1px solid lighten(@color-navy-light-text, 15%);
             border-top: none;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        &.open.overflowing {
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top: 1px solid lighten(@color-navy-light-text, 15%);
+
+            li:first-child {
+                border-top: none;
+            }
         }
 
         li {
@@ -94,6 +100,11 @@
             img {
                 margin-right: 10px;
                 vertical-align: bottom;
+            }
+
+            span {
+                font-family: OpenSansLight, Helvetica, Arial, sans-serif;
+                font-weight: 100;
             }
 
             &:hover {
@@ -122,7 +133,8 @@
             border: none;
             background: #cfe1ec;
             font-size: 11px;
-            font-family: OpenSansBold;
+            font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+            font-weight: 600;
             color: @color-gray-dark-text;
             text-transform: uppercase;
 
@@ -159,7 +171,8 @@
             border: none;
             background: #cfe1ec;
             font-size: 11px;
-            font-family: OpenSansBold;
+            font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+            font-weight: 600;
             color: @color-gray-dark-text;
             text-transform: uppercase;
             top: 21px;
