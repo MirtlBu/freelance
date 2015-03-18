@@ -115,10 +115,10 @@ input, textarea {
 
 .container {
     width: 940px;
-    padding-bottom: 33px;
     box-sizing: border-box;
     margin: 0 auto;
     position: relative;
+    overflow: hidden;
     z-index: 1;
 }
 
@@ -126,7 +126,7 @@ input, textarea {
     width: 100%;
     height: 85px;
     background: #FFFFFF;
-    margin-bottom: 25px;
+    margin: 15px 0 25px 0;
 
     &__links {
         display: inline-block;
@@ -1056,4 +1056,31 @@ input, textarea {
             opacity: .5;
         }
     }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 9999;
+    display: block;
+    visibility: hidden;
+
+    &.visible {
+        visibility: visible;
+    }
+}
+
+.loader {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -15px;
+    text-align: center;
 }
