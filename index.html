@@ -9,6 +9,11 @@
 </head>
 <body>
     <div class="background">
+        <div class="overlay">
+            <div class="loader">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 100 100"><defs><linearGradient x2="50" y1="100" x1="30" gradientUnits="userSpaceOnUse" id="a"><stop offset="0"/><stop offset="1" stop-opacity=".2"/></linearGradient></defs><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="30" y1="100" x2="50" xlink:href="#a"><stop offset="0" stop-color="#006ab4"/><stop offset="1" stop-color="#fff"/></linearGradient><path fill="url(#b)" d="M50.07.078C22.473.078.102 22.448.102 50.044c0 27.595 22.37 49.966 49.966 49.966s49.965-22.37 49.965-49.966S77.665.078 50.07.078zm-.06 84.984c-19.316 0-34.976-15.66-34.976-34.976 0-19.317 15.66-34.976 34.976-34.976 19.317 0 34.977 15.66 34.977 34.976 0 19.315-15.66 34.976-34.977 34.976z"><animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="360 50 50" begin="0s" dur=".7s" repeatCount="indefinite"/></path></svg>
+            </div>
+        </div>
         <div class="container">
             <div class="header">
                 <div class="logoTE">
@@ -48,7 +53,6 @@
                             <li class="user__link"><a href="#">Резервы</a></li>
                         </ul>
                     </div>
-
                     <div class="user__stuff user__stuff--hidden">
                         <ul class="user__controls">
                             <li class="user__control user__name--anon"><a href="">Войти в кабинет</a></li>
@@ -75,7 +79,6 @@
                     <option value="en">en</option>
                 </select>
             </div>
-
             <div class="steps step1">
                 <div class="dialog">
                     <form class="form step1__form" novalidate>
@@ -97,7 +100,6 @@
                         <div class="action-next">
                             <img src="img/icon-action-next.png">
                         </div>
-                        <div class="loader"></div>
                         <div class="get">
                             <label class="form__label">
                                 <div class="form__title">Вы получаете</div>
@@ -231,7 +233,6 @@
                     </ul>
                 </div>
             </div>
-
             <div class="footer">
                 <div class="logoTE">
                     <img src="img/logoTE.png">
@@ -264,6 +265,7 @@
                 <div class="copyrights__text">© 2011-2015.All copiryght reserved.</div>
             </div>
         </div>
+
     </div>
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/fancySelect.js"></script>
