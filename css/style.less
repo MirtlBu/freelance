@@ -26,6 +26,20 @@
 @color-gray-light-text: #b2b2b2;
 @color-form-error: #fe8686;
 
+.fontRegular {
+    font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fontBold {
+    font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+&:extend(.fontBold);
+
 @import "fancySelectOverwriting.less";
 
 body, html {
@@ -33,6 +47,7 @@ body, html {
     height: 100%;
     padding: 0;
     margin: 0;
+
 }
 
 ul, li {
@@ -133,8 +148,7 @@ input, textarea {
             position: relative;
             font-size: 16px;
             line-height: 18px;
-            font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
-            font-weight: 400;
+            &:extend(.fontRegular);
             color: @color-gray-dark-text;
 
             &:after {
@@ -142,7 +156,7 @@ input, textarea {
                 position: absolute;
                 left: 0;
                 right: 0;
-                bottom: 2px;
+                bottom: 1px;
                 height: 0;
                 border-bottom: 1px solid @color-gray-dark-text;
             }
@@ -176,9 +190,9 @@ input, textarea {
 
         & > a {
             font-size: 11px;
-            font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
-            font-weight: 400;
-            color: @color-gray-light-text;
+            &:extend(.fontRegular);
+            // color: @color-gray-light-text;
+            color: #a2a2a2;
             position: relative;
 
             &:after {
@@ -188,7 +202,7 @@ input, textarea {
                 right: 0;
                 bottom: 0;
                 height: 0;
-                border-bottom: 1px dotted @color-gray-light-text;
+                border-bottom: 1px dotted #a2a2a2;
             }
         }
 
@@ -259,15 +273,13 @@ input, textarea {
 
     &__name {
         font-size: 16px;
-        font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
-        font-weight: 400;
+        &:extend(.fontRegular);
         color: #FFFFFF;
 
         &--anon {
             a {
                 font-size: 16px;
-                font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
-                font-weight: 400;
+                &:extend(.fontRegular);
                 color: #FFFFFF;
                 position: relative;
 
@@ -289,10 +301,9 @@ input, textarea {
 
         a {
             font-size: 11px;
-            font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
-            font-weight: 400;
+            &:extend(.fontRegular);
             color: #FFFFFF;
-            opacity: .5;
+            opacity: .8;
             position: relative;
             margin-right: 8px;
 
@@ -359,8 +370,7 @@ input, textarea {
 
         a {
             font-size: 12px;
-            font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
-            font-weight: 400;
+            &:extend(.fontRegular);
             color: @color-navy;
             opacity: .5;
             position: relative;
@@ -420,8 +430,7 @@ input, textarea {
 
     &__p {
         font-size: 13px;
-        font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
-        font-weight: 400;
+        &:extend(.fontRegular);
         color: #a1a1a1;
         line-height: 20px;
     }
@@ -431,8 +440,7 @@ input, textarea {
 
     &__title {
         font-size: 11px;
-        font-family: OpenSansBold, Helvetica, Arial, sans-serif;
-        font-weight: 600;
+        &:extend(.fontBold);
         color: @color-navy;
         text-transform: uppercase;
         margin-bottom: 10px;
@@ -445,9 +453,8 @@ input, textarea {
         border-radius: 5px;
         text-align: center;
         font-size: 14px;
-        font-family: OpenSansBold, Helvetica, Arial, sans-serif;
-        font-weight: 600;
-        color: #646464;
+        &:extend(.fontBold);
+        color: @color-gray-dark-text;
         margin-bottom: 42px;
         box-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.04);
     }
@@ -511,9 +518,8 @@ input, textarea {
 
     &--long {
         width: 345px;
-        font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
-        font-weight: 400;
-
+        &:extend(.fontRegular);
+        -webkit-font-smoothing: antialiased;
         text-align: left;
     }
 
@@ -564,8 +570,7 @@ input, textarea {
     &__title {
 
         font-size: 30px;
-        font-family: OpenSansBold, Helvetica, Arial, sans-serif;
-        font-weight: 600;
+        &:extend(.fontBold);
         color: @color-navy;
         display: inline-block;
         vertical-align: middle;
@@ -606,7 +611,7 @@ input, textarea {
         }
 
         .article__content {
-            color: #e6e6e6;
+            color: #e5e5e5;
         }
     }
 }
@@ -630,8 +635,7 @@ input, textarea {
 
         &-text {
             font-size: 18px;
-            font-family: OpenSansBold, Helvetica, Arial, sans-serif;
-            font-weight: 600;
+            &:extend(.fontBold);
             color: @color-navy;
             display: inline-block;
             vertical-align: top;
@@ -657,8 +661,7 @@ input, textarea {
 
         &-title {
             font-size: 13px;
-            font-family: OpenSansBold, Helvetica, Arial, sans-serif;
-            font-weight: 600;
+            &:extend(.fontBold);
             color: @color-gray-dark-text;
             display: inline-block;
             vertical-align: top;
@@ -677,8 +680,7 @@ input, textarea {
 
         &-value {
             font-size: 13px;
-            font-family: OpenSansBold, Helvetica, Arial, sans-serif;
-            font-weight: 600;
+            &:extend(.fontBold);
             color: @color-navy;
             float: right;
         }
@@ -691,8 +693,7 @@ input, textarea {
 
         a {
             font-size: 11px;
-            font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
-            font-weight: 400;
+            &:extend(.fontRegular);
             color: #71aacc;
             position: relative;
 
@@ -725,7 +726,7 @@ input, textarea {
 
     .get {
         .form__input {
-            color: #7fb4d9;
+            color: @color-navy-light-text;
         }
     }
 
@@ -793,8 +794,7 @@ input, textarea {
         }
         &__name {
             font-size: 14px;
-            font-family: OpenSansBold, Helvetica, Arial, sans-serif;
-            font-weight: 600;
+            &:extend(.fontBold);
             color: #808080;
             margin-top: 30px;
         }
@@ -849,8 +849,7 @@ input, textarea {
         border-radius: 50%;
         background: @color-navy-light;
         font-size: 24px;
-        font-family: OpenSansBold, Helvetica, Arial, sans-serif;
-        font-weight: 600;
+        &:extend(.fontBold);
         color: #FFFFFF;
         text-align: center;
     }
@@ -859,8 +858,7 @@ input, textarea {
         display: inline-block;
         vertical-align: middle;
         font-size: 24px;
-        font-family: OpenSansBold, Helvetica, Arial, sans-serif;
-        font-weight: 600;
+        &:extend(.fontBold);
         color: @color-navy-light;
     }
 }
@@ -888,7 +886,7 @@ input, textarea {
         width: 10px;
         height: 10px;
         border-radius: 5px;
-        border: 1px solid #7fb4d9;
+        border: 1px solid @color-navy-light-text;
         display: inline-block;
         vertical-align: middle;
         position: relative;
@@ -909,8 +907,7 @@ input, textarea {
 
     &__text {
         font-size: 13px;
-        font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
-        font-weight: 400;
+        &:extend(.fontRegular);
         color: #a1a1a1;
         width: 200px;
         display: inline-block;
@@ -924,12 +921,12 @@ input, textarea {
     &__input:checked ~ &__label {
 
         &:after {
-            background: #7fb4d9;
+            background: @color-navy-light-text;
         }
     }
 
     &__input:checked ~ &__text {
-        color: #7fb4d9;
+        color: @color-navy-light-text;
     }
 }
 
@@ -995,8 +992,7 @@ input, textarea {
 
     &__text {
         font-size: 13px;
-        font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
-        font-weight: 400;
+        &:extend(.fontRegular);
         color: #a1a1a1;
         width: 695px;
         display: inline-block;
@@ -1005,7 +1001,7 @@ input, textarea {
 
     &__input:checked ~ &__label {
 
-        border: 1px solid #7fb4d9;
+        border: 1px solid @color-navy-light-text;
 
         &:after {
             background: url(../img/icon-check-1.png) no-repeat;
@@ -1014,7 +1010,7 @@ input, textarea {
     }
 
     &__input:checked ~ &__text {
-        color: #7fb4d9;
+        color: @color-navy-light-text;
     }
 }
 
@@ -1028,8 +1024,6 @@ input, textarea {
         vertical-align: top;
         margin-right: 15px;
     }
-
-    &__image {}
 }
 
 .back {
