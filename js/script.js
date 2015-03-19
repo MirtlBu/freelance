@@ -1,5 +1,4 @@
 $(function() {
-    load();
 
     var moneyIcons = {
         PerfectMoney: {
@@ -60,14 +59,18 @@ $(function() {
         $select.parent().find('.trigger').html(renderWithImage(moneyIcons[$select.val()].url, $select.val(), moneyIcons[$select.val()].currency))
     });
 
-    $('.action-next').on('click', function() {
+    var loader = $('.action-next').find('img');
+
+    loader.on('click', function() {
         load();
     });
 
     function load() {
-        $('.overlay').addClass('visible');
+        loader.toggleClass('hidden');
+        $('.loader').toggleClass('visible');
         setTimeout(function() {
-            $('.overlay').removeClass('visible');
+            loader.toggleClass('hidden');
+            $('.loader').toggleClass('visible');
         }, 1000);
     }
 });
