@@ -319,6 +319,19 @@ input, textarea {
 
     &__link {
         display: inline-block;
+        margin-right: 5px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: -5px;
+            bottom: 3px;
+            height: 10px;
+            border-right: 1px solid #FFFFFF;
+            opacity: .6;
+        }
 
         a {
             font-size: 13px;
@@ -326,18 +339,6 @@ input, textarea {
             color: #FFFFFF;
             opacity: .7;
             position: relative;
-            margin-right: 5px;
-
-            &:before {
-                content: '';
-                position: absolute;
-                left: 0;
-                right: -5px;
-                bottom: 2px;
-                height: 10px;
-                border-right: 1px solid #FFFFFF;
-                opacity: .6;
-            }
 
             &:after {
                 content: '';
@@ -351,6 +352,7 @@ input, textarea {
 
             &:hover {
                 opacity: .9;
+
                 &:after {
                     border-bottom: none;
                 }
@@ -358,13 +360,10 @@ input, textarea {
         }
 
         &:last-child {
+            margin-right: 0;
 
-            a {
-                margin-right: 0;
-
-                &:before {
-                    height: 0;
-                }
+            &:before {
+                border-right: none;
             }
         }
     }
