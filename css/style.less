@@ -139,6 +139,8 @@ input, textarea {
         display: inline-block;
         vertical-align: top;
         margin-right: 20px;
+        position: relative;
+        top: 5px;
 
         &:last-child {
             margin-right: 0;
@@ -160,6 +162,13 @@ input, textarea {
                 height: 0;
                 border-bottom: 1px solid @color-gray-dark-text;
             }
+
+            &:hover {
+                color: lighten(@color-gray-dark-text, 20%);
+                &:after {
+                    border-bottom: none;
+                }
+            }
         }
 
         &--active {
@@ -175,25 +184,38 @@ input, textarea {
     }
 
     &__sublinks {
-        margin-top: 5px;
+        margin-top: 2px;
     }
 
     &__sublink {
         display: inline-block;
         vertical-align: top;
-        border-right: 1px solid lighten(@color-gray-light-text, 20%);
-        padding-right: 5px;
 
         &:last-child {
-            border-right:none;
+            & > a {
+                &:before {
+                    border-right: none;
+                }
+            }
         }
 
         & > a {
-            font-size: 11px;
+            font-size: 13px;
             &:extend(.fontRegular);
-            // color: @color-gray-light-text;
             color: #a2a2a2;
             position: relative;
+            margin-right: 5px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: -5px;
+                bottom: 2px;
+                height: 10px;
+                border-right: 1px solid #a2a2a2;
+                opacity: .6;
+            }
 
             &:after {
                 content: '';
@@ -204,15 +226,12 @@ input, textarea {
                 height: 0;
                 border-bottom: 1px dotted #a2a2a2;
             }
-        }
 
-        &:hover {
-
-            & > a {
+            &:hover {
                 color: @color-navy-light-text;
 
-                &:hover {
-                    border-bottom: 1px dotted @color-navy-light-text;
+                &:after {
+                    border-bottom: none;
                 }
             }
         }
@@ -228,7 +247,7 @@ input, textarea {
 
 .user {
     float: right;
-    width: 300px;
+    width: 310px;
     height: 100%;
     background: @color-navy;
     padding: 25px 0;
@@ -241,7 +260,8 @@ input, textarea {
         border-radius: 50%;
         background: #FFFFFF;
         display: inline-block;
-        margin: 0 17px 0 23px;
+        vertical-align: top;
+        margin: 0 15px;
 
         img {
             display: block;
@@ -256,6 +276,7 @@ input, textarea {
 
     &__stuff {
         display: inline-block;
+        margin-left: -3px;
 
         &--hidden {
             display: none;
@@ -300,21 +321,22 @@ input, textarea {
         display: inline-block;
 
         a {
-            font-size: 11px;
+            font-size: 13px;
             &:extend(.fontRegular);
             color: #FFFFFF;
-            opacity: .8;
+            opacity: .7;
             position: relative;
-            margin-right: 8px;
+            margin-right: 5px;
 
             &:before {
                 content: '';
                 position: absolute;
                 left: 0;
-                right: -7px;
-                bottom: 0;
+                right: -5px;
+                bottom: 2px;
                 height: 10px;
                 border-right: 1px solid #FFFFFF;
+                opacity: .6;
             }
 
             &:after {
@@ -325,6 +347,13 @@ input, textarea {
                 bottom: 0;
                 height: 0;
                 border-bottom: 1px dotted #FFFFFF;
+            }
+
+            &:hover {
+                opacity: .9;
+                &:after {
+                    border-bottom: none;
+                }
             }
         }
 
@@ -362,7 +391,8 @@ input, textarea {
 
         .align__tablecell {
             width: 90px;
-            height: 25px;
+            height: 20px;
+            vertical-align: middle;
         }
     }
 
@@ -384,6 +414,13 @@ input, textarea {
                 height: 0;
                 border-bottom: 1px solid @color-navy;
                 opacity: .5;
+            }
+
+            &:hover {
+                opacity: .8;
+                &:after {
+                    border-bottom: none;
+                }
             }
         }
     }
@@ -554,7 +591,7 @@ input, textarea {
     }
 
     &--step3 {
-        display: inline-block;
+        display: block;
         margin-top: 20px;
     }
 
@@ -694,7 +731,8 @@ input, textarea {
         a {
             font-size: 11px;
             &:extend(.fontRegular);
-            color: #71aacc;
+            color: @color-navy;
+            opacity: .5;
             position: relative;
 
             &:after {
@@ -705,6 +743,13 @@ input, textarea {
                 bottom: 0;
                 height: 0;
                 border-bottom: 1px dotted #71aacc;
+            }
+
+            &:hover {
+                opacity: .8;
+                &:after {
+                    border-bottom: none;
+                }
             }
         }
     }
@@ -1027,9 +1072,10 @@ input, textarea {
 }
 
 .back {
-    display: block;
+    display: inline-block;
     margin: 10px 0;
     cursor: pointer;
+    opacity: .7;
 
     &__image {
         display: inline-block;
@@ -1054,6 +1100,17 @@ input, textarea {
             height: 0;
             border-bottom: 1px solid @color-navy;
             opacity: .5;
+        }
+    }
+
+    &:hover {
+        opacity: .9;
+
+        .back__text {
+
+            &:after {
+                border-bottom: none;
+            }
         }
     }
 }
