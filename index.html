@@ -18,13 +18,13 @@
                     <li class="header__link header__link--active"><a href="#">About us</a></li>
                     <li class="header__link"><a href="#">Terms and conditions</a>
                         <ul class="header__sublinks">
-                            <li class="header__sublink"><a href="#">Contact us</a></li>
-                            <li class="header__sublink"><a href="#">Contact us</a></li>
+                            <li class="sublink"><a href="#">Contact us</a></li>
+                            <li class="sublink"><a href="#">Contact us</a></li>
                         </ul>
                     </li>
                     <li class="header__link"><a href="#">Contact us</a>
                         <ul class="header__sublinks">
-                            <li class="header__sublink"><a href="#">Contact us</a></li>
+                            <li class="sublink"><a href="#">Contact us</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -32,7 +32,7 @@
                     <div class="user__img">
                         <img src="img/icon-person.png">
                     </div>
-                    <div class="user__stuff">
+                    <div class="user__stuff user__stuff--hidden">
                         <ul class="user__controls">
                             <li class="user__control user__name">Pablo7780123</li>
                             <li class="user__control user__settings">
@@ -48,9 +48,9 @@
                             <li class="user__link"><a href="#">Резервы</a></li>
                         </ul>
                     </div>
-                    <div class="user__stuff user__stuff--hidden">
+                    <div class="user__stuff">
                         <ul class="user__controls">
-                            <li class="user__control user__name--anon"><a href="">Войти в кабинет</a></li>
+                            <li class="user__control user__name--anon"><a href="signin.html">Войти в кабинет</a></li>
                         </ul>
                         <ul class="user__links">
                             <li class="user__link"><a href="#">Регистрация</a></li>
@@ -62,13 +62,13 @@
             </div>
             <div class="article article--light">
                 <img class="article__title-icon" src="img/icon-reload.png">
-                <div class="article__title">Exchange</div>
+                <h1 class="article__title">Exchange</h1>
                 <div class="article__content">
                     A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
                 </div>
             </div>
-            <div class="language">
-                <select class="language__select">
+            <div class="mini-select mini-select--language">
+                <select>
                     <option value="ru">ru</option>
                     <option value="es">es</option>
                     <option value="en">en</option>
@@ -79,7 +79,7 @@
                     <form class="form step1__form" novalidate>
                         <div class="pay">
                             <label class="form__label form__label--error">
-                                <div class="form__title">Вы отдаёте</div>
+                                <div class="common__title">Вы отдаёте</div>
                                 <input class="form__input form--dark form--medium" type="text" value="2350" name="amount">
                                 <div class="form__error form__error--input">
                                     <img src="img/icon-error.png">
@@ -100,7 +100,7 @@
                         </div>
                         <div class="get">
                             <label class="form__label">
-                                <div class="form__title">Вы получаете</div>
+                                <div class="common__title">Вы получаете</div>
                                 <input class="form__input form--dark form--medium" type="text" value="2 350 555" name="amount">
                                 <div class="form__error form__error--input">
                                     <img src="img/icon-error.png">
@@ -117,7 +117,7 @@
                             <p class="dialog__p">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which.</p>
                         </div>
                         <label class="form__label">
-                            <div class="form__title">Ваш e-mail:</div>
+                            <div class="common__title">Ваш e-mail:</div>
                             <input class="form__input form--light form--long" type="email" value="" name="email">
                             <div class="form__error form__error--input">
                                 <img src="img/icon-error.png">
@@ -174,7 +174,7 @@
                 <div class="reviews">
                     <div class="article">
                         <img class="article__title-icon" src="img/icon-bubble.png">
-                        <div class="article__title">Reviews</div>
+                        <h1 class="article__title">Reviews</h1>
                         <div class="article__content">
                             A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
                         </div>
@@ -201,7 +201,7 @@
                 <div class="about">
                     <div class="article">
                         <img class="article__title-icon" src="img/icon-info.png">
-                        <div class="article__title">About</div>
+                        <h1 class="article__title">About</h1>
                         <div class="article__content">
                             A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
                         </div>

@@ -117,87 +117,176 @@
 }
 
 //переопределяем стили плагина для селекта языков
-.language {
-    float: right;
+.mini-select {
 
-    div.fancy-select {
+    &--language, &--filter {
+        float: right;
+    }
 
-        div.trigger {
-            width: 55px;
-            padding: 5px;
-            box-sizing: border-box;
-            border-radius: 5px;
-            border: none;
-            background: #cfe1ec;
-            font-size: 11px;
-            font-family: OpenSansBold, Helvetica, Arial, sans-serif;
-            font-weight: 600;
-            color: @color-gray-dark-text;
-            text-transform: uppercase;
+    &--filter {
+        div.fancy-select {
 
-            &:before {
-                width: 0;
-                height: 0;
+            div.trigger {
+                width: 100px;
+                padding: 5px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                border: 1px solid lighten(#a2a2a2, 10%);
+                background: #FFFFFF;
+                font-size: 11px;
+                font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+                font-weight: 600;
+                color: @color-gray-dark-text;
+                text-transform: uppercase;
+
+                &:before {
+                    width: 0;
+                    height: 0;
+                }
+
+                &:after {
+                    border: 3px solid transparent;
+                    border-top-color: @color-navy;
+                    opacity: .8;
+                    top: 12px;
+                    right: 5px;
+                }
+
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 2px;
+                }
+
+                &.open {
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
             }
 
-            &:after {
-                border: 3px solid transparent;
-                border-top-color: @color-navy;
-                opacity: .8;
-                top: 12px;
-                right: 5px;
-            }
+            ul.options {
+                width: 100px;
+                padding: 5px 5px 0 5px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                border: 1px solid lighten(#a2a2a2, 10%);
+                background: #FFFFFF;
+                font-size: 11px;
+                font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+                font-weight: 600;
+                color: @color-gray-dark-text;
+                text-transform: uppercase;
+                top: 26px;
 
-            img {
-                display: inline-block;
-                vertical-align: middle;
-                margin-right: 2px;
-            }
+                &.open {
+                    top: 26px;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                }
 
-            &.open {
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
+                li {
+                    padding: 5px 0;
+
+                    &:hover {
+                        color: @color-gray-dark-text;
+                        opacity: .7;
+                    }
+
+                    &.selected {
+                        background: transparent;
+                        color: @color-gray-dark-text;
+                    }
+                }
+
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 2px;
+                }
             }
         }
+    }
 
-        ul.options {
-            width: 55px;
-            padding: 5px 5px 0 5px;
-            box-sizing: border-box;
-            border-radius: 5px;
-            border: none;
-            background: #cfe1ec;
-            font-size: 11px;
-            font-family: OpenSansBold, Helvetica, Arial, sans-serif;
-            font-weight: 600;
-            color: @color-gray-dark-text;
-            text-transform: uppercase;
-            top: 21px;
+    &--language {
+        div.fancy-select {
 
-            &.open {
+            div.trigger {
+                width: 55px;
+                padding: 5px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                border: none;
+                background: #cfe1ec;
+                font-size: 11px;
+                font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+                font-weight: 600;
+                color: @color-gray-dark-text;
+                text-transform: uppercase;
+
+                &:before {
+                    width: 0;
+                    height: 0;
+                }
+
+                &:after {
+                    border: 3px solid transparent;
+                    border-top-color: @color-navy;
+                    opacity: .8;
+                    top: 12px;
+                    right: 5px;
+                }
+
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 2px;
+                }
+
+                &.open {
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+
+            ul.options {
+                width: 55px;
+                padding: 5px 5px 0 5px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                border: none;
+                background: #cfe1ec;
+                font-size: 11px;
+                font-family: OpenSansBold, Helvetica, Arial, sans-serif;
+                font-weight: 600;
+                color: @color-gray-dark-text;
+                text-transform: uppercase;
                 top: 21px;
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-            }
 
-            li {
-                padding: 5px 0;
-
-                &:hover {
-                    color: @color-gray-dark-text;
-                    opacity: .7;
+                &.open {
+                    top: 21px;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
                 }
 
-                &.selected {
-                    background: transparent;
-                    color: @color-gray-dark-text;
-                }
-            }
+                li {
+                    padding: 5px 0;
 
-            img {
-                display: inline-block;
-                vertical-align: middle;
-                margin-right: 2px;
+                    &:hover {
+                        color: @color-gray-dark-text;
+                        opacity: .7;
+                    }
+
+                    &.selected {
+                        background: transparent;
+                        color: @color-gray-dark-text;
+                    }
+                }
+
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 2px;
+                }
             }
         }
     }

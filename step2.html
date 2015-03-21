@@ -18,13 +18,13 @@
                     <li class="header__link header__link--active"><a href="#">About us</a></li>
                     <li class="header__link"><a href="#">Terms and conditions</a>
                         <ul class="header__sublinks">
-                            <li class="header__sublink"><a href="#">Contact us</a></li>
-                            <li class="header__sublink"><a href="#">Contact us</a></li>
+                            <li class="sublink"><a href="#">Contact us</a></li>
+                            <li class="sublink"><a href="#">Contact us</a></li>
                         </ul>
                     </li>
                     <li class="header__link"><a href="#">Contact us</a>
                         <ul class="header__sublinks">
-                            <li class="header__sublink"><a href="#">Contact us</a></li>
+                            <li class="sublink"><a href="#">Contact us</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -32,7 +32,7 @@
                     <div class="user__img">
                         <img src="img/icon-person.png">
                     </div>
-                    <div class="user__stuff">
+                    <div class="user__stuff user__stuff--hidden">
                         <ul class="user__controls">
                             <li class="user__control user__name">Pablo7780123</li>
                             <li class="user__control user__settings">
@@ -49,9 +49,9 @@
                         </ul>
                     </div>
 
-                    <div class="user__stuff user__stuff--hidden">
+                    <div class="user__stuff">
                         <ul class="user__controls">
-                            <li class="user__control user__name--anon"><a href="">Войти в кабинет</a></li>
+                            <li class="user__control user__name--anon"><a href="signin.html">Войти в кабинет</a></li>
                         </ul>
                         <ul class="user__links">
                             <li class="user__link"><a href="#">Регистрация</a></li>
@@ -63,13 +63,13 @@
             </div>
             <div class="article article--light">
                 <img class="article__title-icon" src="img/icon-reload.png">
-                <div class="article__title">Exchange</div>
+                <h1 class="article__title">Exchange</h1>
                 <div class="article__content">
                     A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
                 </div>
             </div>
-            <div class="language">
-                <select class="language__select">
+            <div class="mini-select mini-select--language">
+                <select>
                     <option value="ru">ru</option>
                     <option value="es">es</option>
                     <option value="en">en</option>
@@ -84,7 +84,7 @@
                     </div>
                     <form class="form">
                         <label class="form__label">
-                            <div class="form__title">Ваше имя</div>
+                            <div class="common__title">Ваше имя</div>
                             <input class="form__input form--dark form--long" type="text" value="" name="">
                             <div class="form__error form__error--input">
                                 <img src="img/icon-error.png">
@@ -92,7 +92,7 @@
                             </div>
                         </label>
                         <label class="form__label">
-                            <div class="form__title">Ваша фамилия</div>
+                            <div class="common__title">Ваша фамилия</div>
                             <input class="form__input form--dark form--long" type="text" value="" name="">
                             <div class="form__error form__error--input">
                                 <img src="img/icon-error.png">
@@ -100,7 +100,7 @@
                             </div>
                         </label>
                         <ul class="radio">
-                            <li class="form__title">Выберите нужное</li>
+                            <li class="common__title">Выберите нужное</li>
                             <li class="radio__item">
                                 <input class="radio__input" type="radio" name="choose" value="radio1" id="radio1" checked>
                                 <label class="radio__label" for="radio1"></label>
@@ -118,7 +118,7 @@
                             </li>
                         </ul>
                         <label class="form__label">
-                            <div class="form__title">Ваш email</div>
+                            <div class="common__title">Ваш email</div>
                             <input class="form__input form--dark form--long" type="text" value="2350" name="amount">
                             <div class="form__error form__error--input">
                                 <img src="img/icon-error.png">
@@ -153,7 +153,7 @@
                         <div class="captcha">
                             <div class="captcha__image"><img src="img/captcha.jpg"></div>
                             <div class="captcha__input">
-                                <div class="form__title">Введите код с картинки</div>
+                                <div class="common__title">Введите код с картинки</div>
                                 <input class="form__input form--light form--short" type="text" value="" name="">
                             </div>
                         </div>
@@ -192,11 +192,6 @@
             <div class="copyrights">
                 <image class="copyrights__image" src="img/logoPSSL.png">
                 <div class="copyrights__text">© 2011-2015.All copiryght reserved.</div>
-            </div>
-        </div>
-        <div class="overlay">
-            <div class="loader">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 100 100"><defs><linearGradient x2="50" y1="100" x1="30" gradientUnits="userSpaceOnUse" id="a"><stop offset="0"/><stop offset="1" stop-opacity=".2"/></linearGradient></defs><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="30" y1="100" x2="50" xlink:href="#a"><stop offset="0" stop-color="#006ab4"/><stop offset="1" stop-color="#fff"/></linearGradient><path fill="url(#b)" d="M50.07.078C22.473.078.102 22.448.102 50.044c0 27.595 22.37 49.966 49.966 49.966s49.965-22.37 49.965-49.966S77.665.078 50.07.078zm-.06 84.984c-19.316 0-34.976-15.66-34.976-34.976 0-19.317 15.66-34.976 34.976-34.976 19.317 0 34.977 15.66 34.977 34.976 0 19.315-15.66 34.976-34.977 34.976z"><animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="360 50 50" begin="0s" dur=".7s" repeatCount="indefinite"/></path></svg>
             </div>
         </div>
     </div>

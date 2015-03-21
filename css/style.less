@@ -38,8 +38,6 @@
     -webkit-font-smoothing: antialiased;
 }
 
-&:extend(.fontBold);
-
 @import "fancySelectOverwriting.less";
 
 body, html {
@@ -68,6 +66,10 @@ button {
 input, textarea {
     border: none;
     padding: 0;
+}
+
+h1 {
+    margin: 0;
 }
 
 .align {
@@ -187,52 +189,53 @@ input, textarea {
         margin-top: 2px;
     }
 
-    &__sublink {
-        display: inline-block;
-        vertical-align: top;
+}
 
-        &:last-child {
-            & > a {
-                &:before {
-                    border-right: none;
-                }
+.sublink {
+    display: inline-block;
+    vertical-align: top;
+
+    &:last-child {
+        & > a {
+            &:before {
+                border-right: none;
             }
         }
+    }
 
-        & > a {
-            font-size: 13px;
-            &:extend(.fontRegular);
-            color: #a2a2a2;
-            position: relative;
-            margin-right: 5px;
+    & > a {
+        font-size: 13px;
+        &:extend(.fontRegular);
+        color: #a2a2a2;
+        position: relative;
+        margin-right: 5px;
 
-            &:before {
-                content: '';
-                position: absolute;
-                left: 0;
-                right: -5px;
-                bottom: 2px;
-                height: 10px;
-                border-right: 1px solid #a2a2a2;
-                opacity: .6;
-            }
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: -5px;
+            bottom: 2px;
+            height: 10px;
+            border-right: 1px solid #a2a2a2;
+            opacity: .6;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 0;
+            border-bottom: 1px dotted #a2a2a2;
+        }
+
+        &:hover {
+            color: @color-navy-light-text;
 
             &:after {
-                content: '';
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                height: 0;
-                border-bottom: 1px dotted #a2a2a2;
-            }
-
-            &:hover {
-                color: @color-navy-light-text;
-
-                &:after {
-                    border-bottom: none;
-                }
+                border-bottom: none;
             }
         }
     }
@@ -286,6 +289,7 @@ input, textarea {
     &__control {
         display: inline-block;
         margin-left: 5px;
+        cursor: pointer;
 
         &:first-child {
             margin-left: 0;
@@ -315,6 +319,10 @@ input, textarea {
                 }
             }
         }
+    }
+
+    &__links {
+        margin-top: 4px;
     }
 
     &__link {
@@ -460,7 +468,7 @@ input, textarea {
 }
 
 .dialog {
-    padding: 20px 25px;
+    padding: 20px 25px 25px 25px;
     box-sizing: border-box;
     background: #FFFFFF;
 
@@ -472,15 +480,15 @@ input, textarea {
     }
 }
 
-.form {
+.common__title {
+    font-size: 11px;
+    &:extend(.fontBold);
+    color: @color-navy;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
 
-    &__title {
-        font-size: 11px;
-        &:extend(.fontBold);
-        color: @color-navy;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
+.form {
 
     &__input {
         height: 42px;
@@ -521,6 +529,7 @@ input, textarea {
         border: 1px solid @color-form-error;
         padding: 10px 5px;
         box-sizing: border-box;
+        margin-bottom: 15px;
 
         span {
             width: 695px;
@@ -554,6 +563,7 @@ input, textarea {
 
     &--long {
         width: 345px;
+        margin-right: 20px;
         &:extend(.fontRegular);
         -webkit-font-smoothing: antialiased;
         text-align: left;
@@ -586,12 +596,22 @@ input, textarea {
 
     &--step2 {
         display: inline-block;
-        margin-top: 60px;
+        margin-top: 45px;
     }
 
     &--step3 {
         display: block;
         margin-top: 20px;
+    }
+
+    &--signin {
+        float: right;
+        margin-right: 20px;
+        background: @color-navy url(../img/button-login.png) 35px 10px no-repeat;
+
+        &:hover {
+            background: @color-navy-dark url(../img/button-login.png) 35px 10px no-repeat;
+        }
     }
 
     a {
@@ -886,6 +906,7 @@ input, textarea {
         }
     }
 }
+
 .step2 {
 
     .form__select.fancy-select {
@@ -893,10 +914,6 @@ input, textarea {
         vertical-align: top;
         position: relative;
         top: 25px;
-    }
-
-    .form__label {
-        margin-right: 20px;
     }
 }
 
@@ -1079,7 +1096,7 @@ input, textarea {
 .captcha {
     display: inline-block;
     vertical-align: top;
-    margin-top: 35px;
+    margin-top: 20px;
 
     &__input, &__image {
         display: inline-block;
@@ -1130,4 +1147,143 @@ input, textarea {
             }
         }
     }
+}
+
+.signin {
+
+    .sublink {
+        display: block;
+        margin-bottom: 10px;
+
+        a {
+            &:before {
+                border-right: none;
+            }
+        }
+    }
+
+    &__form {
+        width: 734px;
+    }
+
+    .form__input {
+        margin-bottom: 0;
+    }
+
+    .checkbox {
+        margin-bottom: 25px;
+
+        &__text {
+            vertical-align: bottom;
+        }
+    }
+}
+
+.rates {
+    &__table {
+        width: 100%;
+        margin: 30px 0;
+        border-collapse: collapse;
+
+        thead {
+            background: @color-navy;
+            line-height: 30px;
+        }
+
+        th {
+            font-size: 11px;
+            &:extend(.fontBold);
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+
+        td {
+            font-size: 13px;
+            font-family: OpenSansLight,Helvetica,Arial,sans-serif;
+            font-weight: 100;
+            color: #646464;
+            text-align: center;
+            line-height: 42px;
+        }
+
+        tr {
+            border-right: 1px solid #fafafa;
+            border-left: 1px solid #fafafa;
+        }
+
+        tr:nth-child(2n) {
+            background: #fafafa;
+        }
+    }
+
+    &__td {
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            bottom: 0;
+            right: 0;
+            margin-top: -6px;
+            width: 0;
+            height: 12px;
+            border-right: 1px solid #a2a2a2;
+            opacity: .5;
+        }
+
+        &:last-child {
+
+            &:after {
+                border-right: none;
+            }
+        }
+    }
+
+    &__td--exchange {
+        width: 250px;
+    }
+
+    &__td--fee {
+        width: 50px;
+    }
+
+    &__td--comission {
+
+    }
+
+    &__td--type {
+        width: 110px;
+    }
+
+    &__td--reserve {
+        width: 145px;
+    }
+
+    &__from, &__point, &__to {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__from, &__to {
+
+        img {
+            margin-right: 5px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    &__point {
+        margin: 0 5px;
+    }
+}
+
+.rates__table .mix{
+    display: none;
 }

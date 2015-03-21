@@ -48,7 +48,6 @@
                             <li class="user__link"><a href="#">Резервы</a></li>
                         </ul>
                     </div>
-
                     <div class="user__stuff">
                         <ul class="user__controls">
                             <li class="user__control user__name--anon"><a href="signin.html">Войти в кабинет</a></li>
@@ -75,70 +74,39 @@
                     <option value="en">en</option>
                 </select>
             </div>
-
-            <div class="step step3">
+            <div class="signin">
                 <div class="dialog">
-                    <div class="numeration">
-                        <div class="numeration__circle">3</div>
-                        <div class="numeration__text">-ий Шаг</div>
-                    </div>
-                    <form class="form">
-                        <div class="common__title">Ваше имя</div>
-                        <div class="dialog__text">
-                            <p class="dialog__p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                    <form class="form signin__form">
+                        <div class="numeration">
+                            <div class="numeration__text">Авторизация</div>
                         </div>
-                        <button class="button-exchange button-exchange--step3" type="submit"></button>
-                        <a href="step2.html" class="back">
-                            <img class="back__image" src="img/icon-back.png">
-                            <div class="back__text">Вернуться на шаг назад</div>
-                        </a>
-                        <div class="table">
-                            <div class="table__title">
-                                <div class="table__title-text">Данные перевода</div>
-                            </div>
-                            <ul class="table__list">
-                                <li class="table__list-item">
-                                    <div class="table__list-title">Система:</div>
-                                    <div class="table__list-value">Wester Union</div>
-                                </li>
-                                <li class="table__list-item">
-                                    <div class="table__list-title">Имя получателя:</div>
-                                    <div class="table__list-value">Васисуалий</div>
-                                </li>
-                                <li class="table__list-item">
-                                    <div class="table__list-title">Фамилия получателя:</div>
-                                    <div class="table__list-value">Петров</div>
-                                </li>
-                                <li class="table__list-item">
-                                    <div class="table__list-title">Город:</div>
-                                    <div class="table__list-value">Москва</div>
-                                </li>
-                                <li class="table__list-item">
-                                    <div class="table__list-title">Страна:</div>
-                                    <div class="table__list-value">Россия</div>
-                                </li>
-                            </ul>
+                        <div class="form__error form__error--paragraph">
+                            <img src="img/icon-error.png">
+                            <span>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine</span>
                         </div>
-                        <div class="dialog__text">
-                            <p class="dialog__p">Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-                        </div>
+                        <label class="form__label">
+                            <div class="common__title">Логин</div>
+                            <input class="form__input form--dark form--long" type="text" value="" name="login">
+                        </label>
+                        <label class="form__label">
+                            <div class="common__title">Пароль</div>
+                            <input class="form__input form--dark form--long" type="password" value="" name="password">
+                        </label>
                         <ul class="checkbox">
                             <li class="checkbox__item">
-                                <input class="checkbox__input" type="checkbox" name="check" value="check1" id="check3">
-                                <label class="checkbox__label" for="check3"></label>
-                                <div class="checkbox__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massaum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</div>
+                                <input class="checkbox__input" type="checkbox" name="check" value="remember" id="remember" checked>
+                                <label class="checkbox__label" for="remember"></label>
+                                <div class="checkbox__text">Запомнить меня</div>
                             </li>
+                         </ul>
+                        <button class="button-exchange button-exchange--signin" type="submit"><a href="index.html"></a></button>
+                        <ul>
+                            <li class="sublink"><a href="#">Восстановление пароля</a></li>
+                            <li class="sublink"><a href="#">Регистрация</a></li>
                         </ul>
-                        <button class="button-exchange button-exchange--step3" type="submit"></button>
-                        <a href="step2.html" class="back">
-                            <img class="back__image" src="img/icon-back.png">
-                            <div class="back__text">Вернуться на шаг назад</div>
-                        </a>
                     </form>
                 </div>
             </div>
-
-
             <div class="footer">
                 <div class="logoTE">
                     <img src="img/logoTE.png">
@@ -150,6 +118,12 @@
                             <div class="footer__link align__tablecell"><a href="#">Ссылка 2</a></div>
                             <div class="footer__link align__tablecell"><a href="#">Ссылка 1</a></div>
                             <div class="footer__link align__tablecell"><a href="#">Ссылка 2</a></div>
+                        </div>
+                        <div class="align__tablerow">
+                            <div class="footer__link align__tablecell"><a href="#">Ссылка 2</a></div>
+                            <div class="footer__link align__tablecell"><a href="#">Ссылка 1</a></div>
+                            <div class="footer__link align__tablecell"><a href="#">Ссылка 2</a></div>
+                            <div class="footer__link align__tablecell"><a href="#">Ссылка 1</a></div>
                         </div>
                         <div class="align__tablerow">
                             <div class="footer__link align__tablecell"><a href="#">Ссылка 2</a></div>
@@ -171,6 +145,7 @@
                 <div class="copyrights__text">© 2011-2015.All copiryght reserved.</div>
             </div>
         </div>
+
     </div>
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/fancySelect.js"></script>
