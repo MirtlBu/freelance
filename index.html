@@ -8,7 +8,7 @@
     <title>Such exchange, much money</title>
 </head>
 <body>
-    <div class="background">
+    <div class="background background--high">
         <div class="container">
             <div class="header">
                 <div class="logoTE">
@@ -63,7 +63,7 @@
             <div class="article article--light">
                 <img class="article__title-icon" src="img/icon-reload.png">
                 <h1 class="article__title">Exchange</h1>
-                <div class="article__content">
+                <div class="common__content common__content--light">
                     A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
                 </div>
             </div>
@@ -79,7 +79,7 @@
                     <form class="form step1__form" novalidate>
                         <div class="pay">
                             <label class="form__label form__label--error">
-                                <div class="common__title">Вы отдаёте</div>
+                                <div class="common__title common__title--form">Вы отдаёте</div>
                                 <input class="form__input form--dark form--medium" type="text" value="2350" name="amount">
                                 <div class="form__error form__error--input">
                                     <img src="img/icon-error.png">
@@ -100,7 +100,7 @@
                         </div>
                         <div class="get">
                             <label class="form__label">
-                                <div class="common__title">Вы получаете</div>
+                                <div class="common__title common__title--form">Вы получаете</div>
                                 <input class="form__input form--dark form--medium" type="text" value="2 350 555" name="amount">
                                 <div class="form__error form__error--input">
                                     <img src="img/icon-error.png">
@@ -117,7 +117,7 @@
                             <p class="dialog__p">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which.</p>
                         </div>
                         <label class="form__label">
-                            <div class="common__title">Ваш e-mail:</div>
+                            <div class="common__title common__title--form">Ваш e-mail:</div>
                             <input class="form__input form--light form--long" type="email" value="" name="email">
                             <div class="form__error form__error--input">
                                 <img src="img/icon-error.png">
@@ -175,55 +175,59 @@
                     <div class="article">
                         <img class="article__title-icon" src="img/icon-bubble.png">
                         <h1 class="article__title">Reviews</h1>
-                        <div class="article__content">
+                        <div class="common__content">
                             A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
                         </div>
                     </div>
                     <div class="reviews__item">
-                        <div class="reviews__bubble">
-                            <img class="reviews__quotes" src="img/quotes.png">
-                            <div class="reviews__review">
-                                Заинтересовался идеей интернет-магазина будучи студентом пару лет назад. Сперва начал на другом сервисе, но немного пошарив в сети наткнулся на Epicsell. Перешел на него. Теперь доволен, бизнес продвигается и функционал позволяет развиваться.
+                        <div class="quote quote--review">
+                            <div class="quote__content">
+                                <img class="quote__image" src="img/quotes-gray.png">
+                                <div class="quote__text">
+                                    Заинтересовался идеей интернет-магазина будучи студентом пару лет назад. Сперва начал на другом сервисе, но немного пошарив в сети наткнулся на Epicsell. Перешел на него. Теперь доволен, бизнес продвигается и функционал позволяет развиваться.
+                                </div>
                             </div>
+                            <div class="quote__name">Анастасия Сaмойлова</div>
                         </div>
-                        <div class="reviews__name">Анастасия Смойлова</div>
                     </div>
                     <div class="reviews__item">
-                        <div class="reviews__bubble">
-                            <img class="reviews__quotes" src="img/quotes.png">
-                            <div class="reviews__review">
-                                Заинтересовался идеей интернет-магазина будучи студентом пару лет назад. Сперва начал на другом сервисе, но немного пошарив в сети наткнулся на Epicsell. Перешел на него. Теперь доволен, бизнес продвигается и функционал позволяет развиваться.
+                        <div class="quote quote--review">
+                            <div class="quote__content">
+                                <img class="quote__image" src="img/quotes-gray.png">
+                                <div class="quote__text">
+                                    Заинтересовался идеей интернет-магазина будучи студентом пару лет назад. Сперва начал на другом сервисе, но немного пошарив в сети наткнулся на Epicsell. Перешел на него. Теперь доволен, бизнес продвигается и функционал позволяет развиваться.
+                                </div>
                             </div>
+                            <div class="quote__name">Анастасия Сaмойлова</div>
                         </div>
-                        <div class="reviews__name">Анастасия Смойлова</div>
                     </div>
                 </div>
                 <div class="about">
                     <div class="article">
                         <img class="article__title-icon" src="img/icon-info.png">
                         <h1 class="article__title">About</h1>
-                        <div class="article__content">
+                        <div class="common__content">
                             A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
                         </div>
                     </div>
-                    <ul class="about__items">
-                        <li class="about__item">
-                            <img class="about__item-image" src="img/icon-check-1.png">
-                            <div class="about__item-text">
+                    <ul class="checklist">
+                        <li class="checklist__item">
+                            <img class="checklist__item-image" src="img/icon-check-1.png">
+                            <div class="checklist__item-text">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
                                 Cum sociis natoque penatibus et magnis dis parturient montes
                             </div>
                         </li>
-                        <li class="about__item">
-                            <img class="about__item-image" src="img/icon-check-1.png">
-                            <div class="about__item-text">
+                        <li class="checklist__item">
+                            <img class="checklist__item-image" src="img/icon-check-1.png">
+                            <div class="checklist__item-text">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
                                 Cum sociis natoque penatibus et magnis dis parturient montes
                             </div>
                         </li>
-                        <li class="about__item">
-                            <img class="about__item-image" src="img/icon-check-1.png">
-                            <div class="about__item-text">
+                        <li class="checklist__item">
+                            <img class="checklist__item-image" src="img/icon-check-1.png">
+                            <div class="checklist__item-text">
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
                                 Cum sociis natoque penatibus et magnis dis parturient montes
                             </div>
