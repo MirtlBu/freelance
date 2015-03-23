@@ -49,17 +49,19 @@
     height: 85px;
     background: #FFFFFF;
     margin: 15px 0 25px 0;
+    display: table;
 
     &__links {
-        display: inline-block;
+        display: table-cell;
         vertical-align: middle;
-        padding: 0 45px;
+        text-align: center;
         box-sizing: border-box;
     }
 
     &__link {
         display: inline-block;
         vertical-align: top;
+        text-align: left;
         margin-right: 20px;
         position: relative;
         top: 5px;
@@ -162,18 +164,26 @@
 }
 
 .logoTE {
-    display: inline-block;
+    width: 190px;
     vertical-align: middle;
     position: relative;
     top: 15px;
+
+    &--header {
+        display: table-cell;
+    }
+
+    &--footer {
+        display: inline-block;
+    }
 }
 
 .user {
-    float: right;
+    display: table-cell;
+    vertical-align: middle;
     width: 310px;
     height: 100%;
     background: @color-navy;
-    padding: 25px 0;
     box-sizing: border-box;
 
 
