@@ -8,7 +8,7 @@
     <title>Such exchange, much money</title>
 </head>
 <body>
-    <div class="background background--high">
+    <div class="background background--short">
         <div class="container">
             <div class="header">
                 <div class="logoTE logoTE--header">
@@ -61,10 +61,11 @@
                 </div>
             </div>
             <div class="article article--light">
-                <img class="article__title-icon" src="img/icon-reload.png">
-                <h1 class="article__title">Exchange</h1>
+                <img class="article__title-icon" src="img/icon-pin.png">
+                <h1 class="article__title">Contact us</h1>
                 <div class="common__content common__content--light">
-                    A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
+                    I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
+                    A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
                 </div>
             </div>
             <div class="mini-select mini-select--language">
@@ -74,38 +75,47 @@
                     <option value="en">en</option>
                 </select>
             </div>
-            <div class="signin">
-                <div class="dialog">
-                    <form class="form signin__form">
-                        <div class="numeration">
-                            <div class="numeration__text">Авторизация</div>
-                        </div>
-                        <div class="form__error form__error--paragraph">
-                            <img src="img/icon-error.png">
-                            <span>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine</span>
-                        </div>
-                        <label class="form__label">
-                            <div class="common__title common__title--form">Логин</div>
-                            <input class="form__input form--dark form--long" type="text" value="" name="login">
-                        </label>
-                        <label class="form__label">
-                            <div class="common__title common__title--form">Пароль</div>
-                            <input class="form__input form--dark form--long" type="password" value="" name="password">
-                        </label>
-                        <ul class="checkbox">
-                            <li class="checkbox__item">
-                                <input class="checkbox__input" type="checkbox" name="check" value="remember" id="remember" checked>
-                                <label class="checkbox__label" for="remember"></label>
-                                <div class="checkbox__text">Запомнить меня</div>
-                            </li>
-                         </ul>
-                        <button class="button-exchange button-exchange--signin" type="submit"><a href="index.html"></a></button>
-                        <ul>
-                            <li class="sublink"><a href="#">Восстановление пароля</a></li>
-                            <li class="sublink"><a href="#">Регистрация</a></li>
-                        </ul>
-                    </form>
+            <div class="contact">
+                <div class="dialog__text">
+                    <p class="dialog__p">Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                    <p class="dialog__p">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
                 </div>
+                <div class="common__title common__title--text">Свяжитесь с нами, если у вас остались вопросы</div>
+                <div class="common__content">
+                    <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
+                </div>
+                <form class="form contact__form">
+
+                    <label class="form__label form__label--block">
+                        <div class="common__title common__title--form">Ваше имя</div>
+                        <input class="form__input form--light form--medium" type="text" value="" name="name">
+                        <div class="form__error form__error--input">
+                            <img src="img/icon-error.png">
+                            <span>Поле заполнено некорректно!</span>
+                        </div>
+                    </label>
+
+                    <label class="form__label form__label--right">
+                        <div class="common__title common__title--form">Ваш email</div>
+                        <textarea class="form__textarea form--light form--long" type="text" value="" name="email"></textarea>
+                        <div class="form__error form__error--input">
+                            <img src="img/icon-error.png">
+                            <span>Поле заполнено некорректно!</span>
+                        </div>
+                    </label>
+
+                    <label class="form__label form__label--block">
+                        <div class="common__title common__title--form">Ваш вопрос</div>
+                        <input class="form__input form--light form--medium" type="text" value="" name="email">
+                        <div class="form__error form__error--input">
+                            <img src="img/icon-error.png">
+                            <span>Поле заполнено некорректно!</span>
+                        </div>
+                    </label>
+
+                    <button class="button-exchange button-exchange--contact" type="submit"><a href="#"></a></button>
+
+                </form>
             </div>
             <div class="footer">
                 <div class="logoTE logoTE--footer">
@@ -149,6 +159,7 @@
     </div>
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/fancySelect.js"></script>
+    <script type="text/javascript" src="js/jquery.mixitup.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 
 </body>

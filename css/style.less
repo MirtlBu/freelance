@@ -227,9 +227,10 @@ h1 {
 }
 
 .form {
+    background: #FFFFFF;
+    position: relative;
 
-    &__input {
-        height: 42px;
+    &__input, &__textarea {
         padding-left: 15px;
         box-sizing: border-box;
         border-radius: 5px;
@@ -238,6 +239,15 @@ h1 {
         color: @color-gray-dark-text;
         margin-bottom: 42px;
         box-shadow: inset 1px 1px 5px 0px rgba(0, 0, 0, 0.04);
+    }
+
+    &__input {
+        height: 42px;
+    }
+
+    &__textarea {
+        height: 84px;
+        resize: none;
     }
 
     &__error {
@@ -287,6 +297,14 @@ h1 {
             .form__error {
                 display: block;
             }
+        }
+
+        // &--block {
+        //     display: block
+        // }
+
+        &--right {
+            float: right;
         }
     }
 
@@ -350,6 +368,17 @@ h1 {
 
         &:hover {
             background: @color-navy-dark url(../img/button-login.png) 35px 10px no-repeat;
+        }
+    }
+
+    &--contact {
+        position: absolute;
+        bottom: 57px;
+        right: 26px;
+        background: @color-navy url(../img/button-send.png) 25px 10px no-repeat;
+
+        &:hover {
+            background: @color-navy-dark url(../img/button-send.png) 25px 10px no-repeat;
         }
     }
 
@@ -508,7 +537,7 @@ h1 {
 
         &-image {
             display: inline-block;
-            vertical-align: top;
+            vertical-align: text-bottom;
             margin-right: 5px;
         }
 
@@ -516,10 +545,11 @@ h1 {
             font-size: 14px;
             font-family: OpenSansLight, Helvetica, Arial, sans-serif;
             font-weight: 100;
-            color: #aaaaaa;
+            color: darken(#dddddc, 10%);
             width: 680px;
             display: inline-block;
             vertical-align: top;
+            line-height: 23px;
         }
     }
 }
@@ -1077,6 +1107,18 @@ h1 {
                 }
             }
         }
+    }
+}
+
+.contact {
+    &__form {
+        width: 666px;
+        padding: 25px 25px 15px 25px;
+        box-sizing: border-box;
+    }
+
+    .form--long {
+        margin-right: 0;
     }
 }
 
