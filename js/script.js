@@ -1,5 +1,5 @@
 $(function() {
-
+    //select plugin stuff
     var moneyIcons = {
         PerfectMoney: {
             currency: '<span> (PM)</span>',
@@ -21,7 +21,8 @@ $(function() {
         en: 'img/flag-en.png'
     };
 
-    var languageSelect = $('.language__select');
+    var languageSelect = $('.mini-select--language').find('select');
+    var ratesFilter = $('.mini-select--filter').find('select');
     var paySelect = $('#paySelect');
     var getSelect = $('#getSelect');
     var currencySelect = $('#currencySelect');
@@ -46,6 +47,13 @@ $(function() {
     $(languageSelect).parent().find('.trigger').html(renderWithImage(langIcons[$(languageSelect).val()], $(languageSelect).val()));
 
 
+    ratesFilter.fancySelect({
+        optionTemplate: function(optionEl) {
+            return '<div class="filter" data-filter="' + optionEl.val() + '">' + optionEl.text() + '</div>';
+        }
+    });
+
+
     [$('#getSelect'), $('#paySelect'), $('#currencySelect')].forEach(function($select) {
         if (!$select.length) return;
         $select.fancySelect({
@@ -59,6 +67,8 @@ $(function() {
         $select.parent().find('.trigger').html(renderWithImage(moneyIcons[$select.val()].url, $select.val(), moneyIcons[$select.val()].currency))
     });
 
+
+    //loader stuff
     var loader = $('.action-next').find('img');
 
     loader.on('click', function() {
@@ -72,6 +82,23 @@ $(function() {
             loader.toggleClass('hidden');
             $('.loader').toggleClass('visible');
         }, 1000);
-    }
+    };
+
+    //sort plugin stuff
+    $('.rates__table').mixItUp({
+        animation: {
+            enable: false
+        },
+        selectors: {
+            target: '.sorted'
+        },
+        load: {
+            sort: false
+        },
+        layout: {
+            display: 'table-row'
+        }
+    });
+
 });
 
