@@ -248,6 +248,7 @@ h1 {
     &__textarea {
         height: 84px;
         resize: none;
+        padding-top: 10px;
     }
 
     &__error {
@@ -1117,8 +1118,88 @@ h1 {
         box-sizing: border-box;
     }
 
+    .form--medium {
+        text-align: left;
+        &:extend(.fontRegular);
+    }
+
     .form--long {
         margin-right: 0;
+    }
+}
+
+.pagination {
+    text-align: center;
+    padding: 30px 20px;
+
+    &__prev, &__next {
+
+        a {
+            color: #646464;
+            cursor: default;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 16px;
+        &:extend(.fontRegular);
+        color: @color-navy;
+        line-height: 1.4;
+        margin-right: 10px;
+
+        &--active {
+
+            a {
+                color: @color-navy;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+
+    &__counts {
+        width: 30px;
+        height: 30px;
+        border: 1px solid @color-navy;
+        padding: 5px;
+        box-sizing: border-box;
+        text-align: center;
+        cursor: pointer;
+
+        a {
+            font-size: 16px;
+            &:extend(.fontRegular);
+            color: @color-navy;
+            line-height: 1.4;
+        }
+
+        &:hover {
+            opacity: .5;
+        }
+
+        &--current {
+            border: none;
+            cursor: default;
+
+            a {
+                color: #646464;
+                cursor: default;
+            }
+
+            &:hover {
+                border: none;
+                opacity: 1;
+            }
+        }
     }
 }
 

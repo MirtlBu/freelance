@@ -165,9 +165,11 @@
 
 .logoTE {
     width: 190px;
-    vertical-align: middle;
-    position: relative;
-    top: 15px;
+    vertical-align: bottom;
+
+    img {
+        vertical-align: bottom;
+    }
 
     &--header {
         display: table-cell;
@@ -175,6 +177,8 @@
 
     &--footer {
         display: inline-block;
+        position: relative;
+        top: 15px;
     }
 }
 
