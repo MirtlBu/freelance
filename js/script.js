@@ -100,5 +100,44 @@ $(function() {
         }
     });
 
+    $('.pagination').on('click', '.pagination__item', function(e) {
+        e.preventDefault();
+
+        //spagetti code
+        if($(this).hasClass('pagination__counts')) {
+            $('.pagination__counts').removeClass('pagination__counts--current');
+            $(this).addClass('pagination__counts--current');
+
+            if($(this).next().hasClass('pagination__item--active')) {
+                $(this).next('.pagination__item--active').removeClass('pagination__item--active');
+            }
+            else if($(this).prev().hasClass('pagination__item--active')) {
+                $(this).prev('.pagination__item--active').removeClass('pagination__item--active');
+            }
+            else {
+                $('.pagination__next').addClass('pagination__item--active');
+                $('.pagination__prev').addClass('pagination__item--active');
+            }
+        }
+
+        else if($(this).hasClass('pagination__next pagination__item--active')) {
+            if($(this).prev().prev().hasClass('pagination__counts--current')) {
+                $(this).removeClass('pagination__item--active');
+            }
+            $('.pagination__prev').addClass('pagination__item--active');
+            var cur = $('.pagination__counts--current');
+            cur.removeClass('pagination__counts--current').next('.pagination__counts').addClass('pagination__counts--current');
+        }
+
+        else if($(this).hasClass('pagination__prev pagination__item--active')) {
+            if($(this).next().next().hasClass('pagination__counts--current')) {
+                $(this).removeClass('pagination__item--active');
+            }
+            $('.pagination__next').addClass('pagination__item--active');
+            var cur = $('.pagination__counts--current');
+            cur.removeClass('pagination__counts--current').prev('.pagination__counts').addClass('pagination__counts--current');
+        }
+    });
+
 });
 
